@@ -55,8 +55,10 @@ In this exercise you will:
 
 #### Reflection Questions
 
-1. **What does `typedef struct { ... } Point;` achieve compared to `struct Point { ... };`?**
-2. **How does the compiler lay out a `Point` in memory?**
+1. **What does `typedef struct { ... } Point;` achieve compared to `struct Point { ... };`?
+wenn man den typen am Anfang definiert muss er später beim aufruf nicht städnig neu definiert werden.**
+2. **How does the compiler lay out a `Point` in memory?
+Point besteht aus 2 Double Offset 0 ist der erste double und offset 8 der 2te Double**
 
 ---
 
@@ -73,8 +75,9 @@ In this exercise you will:
 
 #### Reflection Questions
 
-1. **Why is the `-lm` flag necessary to resolve `sqrt`?**
-2. **What happens if you omit `-lm` when calling math functions?**
+1. **Why is the `-lm` flag necessary to resolve `sqrt`?
+Weil die eigentliche implementierung über -lm libm stattfindet.**  
+2. **What happens if you omit `-lm` when calling math functions?durch die fehlende Implementierung kennt er dem Link zur Funktion nicht.**
 
 ---
 
