@@ -107,8 +107,7 @@ Weil die eigentliche implementierung über -lm libm stattfindet.**
 
 #### Reflection Questions
 
-1. **What are the advantages and drawbacks of a header-only library?**
-2. **How does `static inline` affect linkage and code size?**
+1. **What are the advantages and drawbacks of a header-only library?Hier ist kein verlinken wie bei der Mathlib notwendig. Die FUnktionen sind im HEader erhalten und können somit leichter nachvollzogen werden bei kleineren Projekten.NAchteil sind längere Kompilierzeiten aufgrund größer Binärdateien und mehrfachkompilierung**. **How does `static inline` affect linkage and code size? Es spart Funtkionsaufrufe und kann bei kleineren Funktionen schneller laufen. **
 
 ---
 
@@ -131,8 +130,8 @@ Weil die eigentliche implementierung über -lm libm stattfindet.**
 
 #### Reflection Questions
 
-1. **Why must you include `solutions/util.o` when linking instead of just the header?**
-2. **What symbol resolution occurs at compile vs. link time?**
+1. **Why must you include `solutions/util.o` when linking instead of just the header?  Der Header enthält hier nur die Deklaration also wie eine Funktion aufgerzfen wird. in der .o Datei wird sie implementiert. **
+2. **What symbol resolution occurs at compile vs. link time? Beim compilieren wird jede c in eine .o kompiliert. Beim linken werden .o dateien angeschaut und von den übergebenen .o dateien der code eingefügt.**
 
 ---
 
